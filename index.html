@@ -1,96 +1,1705 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GSA 2026 — #TeamGemini Student Ambassador Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --g-blue: #4285F4;
+  --g-red: #EA4335;
+  --g-yellow: #FBBC05;
+  --g-green: #34A853;
+  --g-blue-dark: #1a73e8;
+  --g-bg: #F8F9FA;
+  --g-card: #FFFFFF;
+  --g-text: #202124;
+  --g-muted: #5f6368;
+  --g-border: #DADCE0;
+  --g-blue-light: #E8F0FE;
+  --g-red-light: #FCE8E6;
+  --g-yellow-light: #FEF7E0;
+  --g-green-light: #E6F4EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', 'Google Sans', sans-serif;
+  background: var(--g-bg);
+  color: var(--g-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── GRID BACKGROUND PATTERN ── */
+.grid-bg {
+  background-image: linear-gradient(rgba(66,133,244,0.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(66,133,244,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── TOP NAV ── */
+.topnav {
+  background: #fff;
+  border-bottom: 1px solid var(--g-border);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-brand .gemini-star {
+  width: 32px; height: 32px;
+}
+.nav-brand span {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--g-text);
+}
+.nav-brand span b { color: var(--g-blue); }
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--g-muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.15s;
+}
+.nav-links a:hover { background: var(--g-blue-light); color: var(--g-blue); }
+.nav-btn {
+  background: var(--g-blue);
+  color: #fff !important;
+  border-radius: 24px !important;
+  padding: 8px 20px !important;
+}
+.nav-btn:hover { background: var(--g-blue-dark) !important; color: #fff !important; }
+@media(max-width:640px) {
+  .nav-links a:not(.nav-btn) { display: none; }
+  .topnav { padding: 0 16px; }
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #0D1B2A 0%, #1a1f3a 40%, #0f3460 100%);
+  padding: 80px 24px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.hero-glow-1 {
+  position: absolute; top: -80px; left: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(66,133,244,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-glow-2 {
+  position: absolute; bottom: -80px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(52,168,83,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  padding: 6px 18px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  position: relative;
+}
+.live-dot {
+  width: 7px; height: 7px;
+  background: #34A853;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.5;transform:scale(1.4)}
+}
+
+.hero h1 {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  position: relative;
+}
+.hero h1 .accent-blue { color: #4285F4; }
+.hero h1 .accent-green { color: #34A853; }
+.hero-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+/* sticker-style badge */
+.sticker-badge {
+  display: inline-block;
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 36px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 0 0 3px rgba(66,133,244,0.15);
+  transform: rotate(-1.5deg);
+  transition: transform 0.2s;
+}
+.sticker-badge:hover { transform: rotate(0deg) scale(1.02); }
+.sticker-badge .sb-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--g-muted);
+  margin-bottom: 6px;
+}
+.sticker-badge .sb-gid {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4285F4, #34A853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 4px;
+  display: block;
+  line-height: 1;
+}
+
+.hero-ambassadors {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.amb-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.amb-card:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+.amb-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.amb-info { text-align: left; }
+.amb-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.amb-gid {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.amb-role {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 3px;
+  display: inline-block;
+}
+
+/* ── ALERT ── */
+.alert-bar {
+  background: #fff3e0;
+  border-left: 5px solid var(--g-yellow);
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #b45309;
+  margin-bottom: 32px;
+}
+.alert-bar .alert-icon { font-size: 20px; flex-shrink: 0; }
+.alert-bar strong { display: block; font-size: 15px; margin-bottom: 2px; }
+
+.ref-disclaimer {
+  background: linear-gradient(135deg, #fce8e6, #fff3e0);
+  border: 2px dashed var(--g-red);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #c5221f;
+  margin-bottom: 24px;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* ── SECTION HEADERS ── */
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--g-blue);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: var(--g-blue);
+}
+h2.section-title {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--g-text);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--g-border);
+}
+
+hr.divider { border: none; border-top: 1px solid var(--g-border); margin: 40px 0; }
+
+/* ── STEP CARDS ── */
+.step-card {
+  background: var(--g-card);
+  border-radius: 16px;
+  border: 1px solid var(--g-border);
+  padding: 28px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.step-card:hover {
+  box-shadow: 0 4px 20px rgba(66,133,244,0.12);
+  transform: translateY(-1px);
+}
+.step-card.blue { border-top: 3px solid var(--g-blue); }
+.step-card.red { border-top: 3px solid var(--g-red); }
+.step-card.green { border-top: 3px solid var(--g-green); }
+.step-card.yellow { border-top: 3px solid var(--g-yellow); }
+.step-card.purple { border-top: 3px solid #9c27b0; }
+
+.card-ghost-num {
+  position: absolute;
+  top: -4px; right: 20px;
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  color: rgba(66,133,244,0.05);
+  line-height: 1;
+  user-select: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.card-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.icon-blue { background: var(--g-blue-light); }
+.icon-red { background: var(--g-red-light); }
+.icon-green { background: var(--g-green-light); }
+.icon-yellow { background: var(--g-yellow-light); }
+.icon-purple { background: #f3e8fd; }
+
+.card-header h3 {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--g-text);
+}
+.card-header .card-sub {
+  font-size: 13px;
+  color: var(--g-muted);
+  margin-top: 2px;
+}
+
+/* ── QA BLOCKS ── */
+.qa {
+  background: #F8F9FA;
+  border: 1px solid #E8EAED;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.qa .q {
+  font-size: 13px;
+  color: var(--g-muted);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.qa .a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e8e3e;
+}
+.qa .a .why {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--g-muted);
+  display: block;
+  margin-top: 4px;
+}
+.ref-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fce8e6;
+  color: #c5221f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* ── TIP / WARN BOXES ── */
+.tip {
+  background: var(--g-blue-light);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #174ea6;
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.warn {
+  background: var(--g-yellow-light);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #b45309;
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ── CHECKLIST ── */
+.checklist { list-style: none; margin: 14px 0; }
+.checklist li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed #e8eaed;
+}
+.checklist li:last-child { border: none; }
+.checklist li::before {
+  content: '→';
+  color: var(--g-blue);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── VIDEO PROMPTS ── */
+.video-prompt {
+  background: #fff;
+  border: 1px solid var(--g-border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.vp-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--g-blue);
+  margin-bottom: 6px;
+}
+.vp-prompt {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--g-muted);
+  margin-bottom: 8px;
+}
+.vp-tip { font-size: 13px; color: var(--g-text); font-weight: 500; }
+
+/* ── CAMPUS FIELDS ── */
+.campus-field {
+  background: #fffef0;
+  border: 1px dashed #e0c000;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.cf-label {
+  font-weight: 700;
+  font-size: 11px;
+  color: #b47200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* ── PILL TAGS ── */
+.pill {
+  display: inline-block;
+  background: var(--g-blue-light);
+  color: var(--g-blue);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+.pill.orange { background: var(--g-yellow-light); color: #e65100; }
+.pill.green { background: var(--g-green-light); color: #1e8e3e; }
+.pill.red { background: var(--g-red-light); color: #c5221f; }
+
+/* ── FORM BUTTON ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--g-blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 12px 0 6px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.3);
+}
+.btn:hover {
+  background: var(--g-blue-dark);
+  box-shadow: 0 4px 16px rgba(66,133,244,0.4);
+  transform: translateY(-1px);
+}
+.btn.red { background: var(--g-red); box-shadow: 0 2px 8px rgba(234,67,53,0.3); }
+.btn.red:hover { background: #c5221f; box-shadow: 0 4px 16px rgba(234,67,53,0.4); }
+.btn.green { background: var(--g-green); box-shadow: 0 2px 8px rgba(52,168,83,0.3); }
+
+/* ── TASKS GRID ── */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+@media(max-width:580px) { .tasks-grid { grid-template-columns: 1fr; } }
+
+.task-card {
+  background: #fff;
+  border: 1px solid var(--g-border);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 13px;
+  transition: box-shadow 0.2s;
+}
+.task-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.tc-name {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.tc-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.must { background: var(--g-red-light); color: #c5221f; }
+.boost { background: var(--g-green-light); color: #1e8e3e; }
+
+/* ── REWARD TABLE ── */
+.reward-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.reward-table thead th {
+  background: var(--g-blue);
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.reward-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s;
+}
+.reward-table tbody tr:hover { background: var(--g-blue-light); }
+.reward-table tbody td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.reward-table tbody tr:last-child { border-bottom: none; }
+
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.tier-icon { font-size: 16px; }
+
+/* ── SCORING TABLE ── */
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.score-table thead th {
+  background: #202124;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.score-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+.score-table tbody tr:last-child td { border-bottom: none; }
+.score-table tbody tr:hover td { background: var(--g-blue-light); }
+
+.task-type-must {
+  background: var(--g-red-light);
+  color: #c5221f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.task-type-boost {
+  background: var(--g-green-light);
+  color: #1e8e3e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* ── COMMUNITY SECTION ── */
+.community-band {
+  background: linear-gradient(135deg, #0f3460, #1a1f3a);
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.community-band::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.community-band h3 {
+  font-family: 'Google Sans Display', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.community-band p {
+  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.community-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.comm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.comm-btn.whatsapp {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(37,211,102,0.35);
+}
+.comm-btn.whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+}
+.comm-btn.form {
+  background: var(--g-blue);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(66,133,244,0.35);
+}
+.comm-btn.form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66,133,244,0.45);
+}
+
+/* ── HIGH PERF CARDS ── */
+.hp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.hp-card {
+  background: #fff;
+  border: 1px solid var(--g-border);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.hp-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.hp-card .hp-icon { font-size: 36px; margin-bottom: 12px; }
+.hp-card h4 {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--g-blue);
+  margin-bottom: 8px;
+}
+.hp-card p { font-size: 13px; color: var(--g-muted); }
+
+/* ── GOOGLE COLOR DOTS ── */
+.google-dots {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+.g-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+
+/* ── FAQ ── */
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--g-border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.faq-q {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s;
+}
+.faq-q:hover { background: var(--g-blue-light); }
+.faq-a {
+  padding: 0 18px;
+  font-size: 13px;
+  color: var(--g-muted);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s;
+}
+.faq-a.open { max-height: 200px; padding: 0 18px 14px; }
+.faq-chevron { transition: transform 0.3s; }
+.faq-chevron.open { transform: rotate(180deg); }
+
+/* ── STICKER FLOATS ── */
+.sticker {
+  display: inline-block;
+  font-weight: 900;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+  margin-right: 8px;
+}
+.sticker.blue { background: var(--g-blue); color: #fff; }
+.sticker.red { background: var(--g-red); color: #fff; }
+.sticker.green { background: var(--g-green); color: #fff; }
+.sticker.yellow { background: var(--g-yellow); color: #202124; }
+
+/* ── GEMINI STAR SVG ── */
+.gemini-star-lrg {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #202124;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 13px;
+}
+.footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+.footer-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+.footer-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero h1, .hero-sub, .hero-badge, .sticker-badge, .hero-ambassadors {
+  animation: fadeUp 0.7s ease both;
+}
+.hero h1 { animation-delay: 0.1s; }
+.hero-sub { animation-delay: 0.2s; }
+.sticker-badge { animation-delay: 0.3s; }
+.hero-ambassadors { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px) {
+  .hero { padding: 48px 16px 64px; }
+  .step-card { padding: 18px 16px; }
+  .community-band { padding: 24px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="nav-brand">
+    <svg class="gemini-star" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2C14 8.627 8.627 14 2 14C8.627 14 14 19.373 14 26C14 19.373 19.373 14 26 14C19.373 14 14 8.627 14 2Z"
+        fill="url(#gem-grad)"/>
+      <defs>
+        <linearGradient id="gem-grad" x1="2" y1="2" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4285F4"/>
+          <stop offset="0.33" stop-color="#FBBC05"/>
+          <stop offset="0.66" stop-color="#EA4335"/>
+          <stop offset="1" stop-color="#34A853"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span><b>#TeamGemini</b> GSA 2026</span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">About</a>
+    <a href="#steps">Steps</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#faq">FAQs</a>
+    <a href="https://recruitment.geministudentambassador.com/" target="_blank" class="nav-btn">Apply Now →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero grid-bg" id="top">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="hero-badge">
+    <span class="live-dot"></span>
+    Referral Guide · India 2026
+  </div>
+
+  <h1>
+    <span class="accent-blue">#TeamGemini</span><br>
+    Student Ambassador
+    <span class="accent-green"> 2026</span>
+  </h1>
+
+  <p class="hero-sub">
+    Your zero-confusion, step-by-step guide to joining the Google Student Ambassador Program.
+    Use a referral GID below — answers shown are for <strong style="color:rgba(255,255,255,0.9)">reference & understanding only</strong>.
+  </p>
+
+  <div class="sticker-badge">
+    <div class="sb-label">Use Referral GID →</div>
+    <div>
+      <span class="sticker blue" style="transform:rotate(0)">Ayush Sharma</span>
+      <span class="sb-gid">436</span>
+    </div>
+    <div style="margin-top:10px; border-top: 1px dashed #dadce0; padding-top:10px;">
+      <span class="sticker green" style="transform:rotate(0)">Tushar Goswami</span>
+      <span class="sb-gid">1723</span>
+    </div>
+  </div>
+
+  <div class="hero-ambassadors">
+    <a class="amb-card" href="https://www.linkedin.com/in/ayushh-sharmaa/" target="_blank">
+      <div class="amb-avatar" style="background:linear-gradient(135deg,#4285F4,#34A853)">A</div>
+      <div class="amb-info">
+        <div class="amb-name">Ayush Sharma</div>
+        <div class="amb-gid">GID: 436</div>
+        <span class="amb-role" style="background:rgba(66,133,244,0.2);color:#4285F4">GSA Ambassador</span>
+      </div>
+    </a>
+    <a class="amb-card" href="https://www.linkedin.com/in/not-tushar" target="_blank">
+      <div class="amb-avatar" style="background:linear-gradient(135deg,#34A853,#FBBC05)">T</div>
+      <div class="amb-info">
+        <div class="amb-name">Tushar Goswami</div>
+        <div class="amb-gid">GID: 1723</div>
+        <span class="amb-role" style="background:rgba(52,168,83,0.2);color:#34A853">GSA Ambassador</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <!-- DISCLAIMER -->
+  <div class="ref-disclaimer">
+    <span style="font-size:20px;flex-shrink:0">⚠️</span>
+    <div>
+      <strong>Reference Only — Do NOT Copy-Paste Answers.</strong>
+      The answers and guidance in this guide are purely for understanding how the program works. Write your own original responses in the application — they look for authenticity, not copy-paste. Copied answers get disqualified.
+    </div>
+  </div>
+
+  <!-- ALERT -->
+  <div class="alert-bar">
+    <span class="alert-icon">🔔</span>
+    <div>
+      <strong>Already filled the form and received an onboarding email?</strong>
+      If you got an onboarding mail + contract, simply sign it and reply. You're good! This guide is for people starting from zero.
+    </div>
+  </div>
+
+  <!-- PROGRAM OVERVIEW -->
+  <div id="overview"></div>
+  <div class="section-eyebrow">Program Overview</div>
+  <h2 class="section-title">What is the GSA Program? 🌟</h2>
+
+  <div class="step-card blue" style="border-top:3px solid #4285F4">
+    <div class="google-dots">
+      <div class="g-dot" style="background:#EA4335"></div>
+      <div class="g-dot" style="background:#FBBC05"></div>
+      <div class="g-dot" style="background:#34A853"></div>
+      <div class="g-dot" style="background:#4285F4"></div>
+    </div>
+    <p style="font-size:15px;">
+      The <strong>Google Student Ambassador Program (GSA) 2026</strong> is a 12-month program where selected students represent Google Gemini AI on their college campus. You host events, create content, drive trials of Gemini, and build a community of AI enthusiasts.
     </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
+    <br>
+    <p style="font-size:14px;color:var(--g-muted)">
+      This is run by <strong>Communique Marketing Solutions</strong> (engaged by Google India). It's an internship — not a job — and there's no monthly stipend. But you earn rewards based on points, get an official Google certificate, and build real leadership + marketing skills on your resume.
     </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+    <div class="tip">
+      💡 The internship period runs from the date of joining until <strong>September 2026</strong>, with the overall program cycle ending March 2027.
+    </div>
+    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="https://recruitment.geministudentambassador.com/" target="_blank" class="btn">🌐 Open Application Form</a>
+      <a href="https://chat.whatsapp.com/FYUglyVIyD5I71uIWSMtY3" target="_blank" class="btn" style="background:#25d366">💬 Join WhatsApp Community</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 1 -->
+  <div id="steps"></div>
+  <div class="section-eyebrow">Step 1 of 4</div>
+  <h2 class="section-title">Fill the Application Form 📝</h2>
+
+  <div class="step-card blue">
+    <div class="card-ghost-num">1</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">🔗</div>
+      <div>
+        <h3>Open the Official Form</h3>
+        <div class="card-sub">Takes about 10–12 minutes to complete</div>
+      </div>
+    </div>
+    <a class="btn" href="https://recruitment.geministudentambassador.com/" target="_blank">🌐 Open Application Form</a>
+    <div class="warn">⚠️ Use a Gmail ID you check regularly — all onboarding emails arrive here.</div>
+  </div>
+
+  <!-- PAGE 1 DETAILS -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">1</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">👤</div>
+      <div>
+        <h3>Page 1 — Your Basic Details</h3>
+        <div class="card-sub">Fill honestly and accurately</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>Full Name – as per college records</li>
+      <li>Gmail Email ID – use your most active Gmail</li>
+      <li><strong>Referring Ambassador GID → Enter: <span style="color:var(--g-blue);font-weight:700;">436</span> (Ayush) or <span style="color:#34A853;font-weight:700;">1723</span> (Tushar)</strong></li>
+      <li>WhatsApp Mobile Number</li>
+      <li>Current Year of Study – must be 1st–3rd year (graduating after March 2027)</li>
+      <li>Full college name (official), website URL, course/branch</li>
+      <li>Instagram handle (optional) & LinkedIn profile URL</li>
+    </ul>
+    <div class="warn">⚠️ Students graduating before March 2027 are <strong>not eligible</strong>. 1st and 2nd year students are fine.</div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">2</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">🧠</div>
+      <div>
+        <h3>Section 2 — Situational Questions <span class="pill">Max 30 pts</span></h3>
+        <div class="card-sub">Pick the most practical, action-oriented option</div>
+      </div>
+    </div>
+
+    <div class="ref-note">📌 Reference Only — Understand the logic, write your own answer</div>
+
+    <div class="qa">
+      <div class="q">Q: 30 students expected for a virtual session, only 4 signed up with 3 days left. What do you do?</div>
+      <div class="a">✅ Best approach: Personally message 30–40 people you know, explain why it's worth their time, and ask each one to bring a friend.
+        <span class="why">Direct personal outreach converts far better than blasting group chats. Think quality conversations, not mass messages.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Admin says no external branding allowed. You still need Gemini visibility. What do you do?</div>
+      <div class="a">✅ Best approach: Approach admin with a proposal positioning it as an "AI literacy program" — educational angle, not brand promotion.
+        <span class="why">Reframing it as student skill-building rather than a brand activation gets admin buy-in and achieves the same outcome.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: 45 confirmed but only 12 show up. Event starts in 10 minutes. What do you do?</div>
+      <div class="a">✅ Best approach: Start with 12. A great session for 12 is worth more than a poor one for 45. Make these 12 your biggest advocates.
+        <span class="why">Alternatively, rebrand it as an "exclusive beta session" — shows resilience and creative thinking.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Students who've never used AI — you need their genuine feedback. How?</div>
+      <div class="a">✅ Best approach: Run an informal challenge — "Tell me one thing you wish your phone could magically do for you" — then connect their answers to Gemini yourself.
+        <span class="why">No jargon, zero friction. Gets genuine insights without confusing people with AI terminology.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Campus creator with 8K followers. No budget. How do you convince them to post about Gemini?</div>
+      <div class="a">✅ Best approach: "Let me show you 3 Gemini features your audience would genuinely find useful — I think there's a content idea here. Let's brainstorm together."
+        <span class="why">Creators love fresh content ideas tailored to their audience. Give them value first — don't ask for a favour.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Busy week — rank tasks 1 (first) to 4 (last).</div>
+      <div class="a">✅ Suggested priority: Recurring Gemini trials first → Student feedback → One-time admin event → Personal social posts last
+        <span class="why">Prioritise what directly impacts program metrics (trials + data). One-time events can be scheduled; personal posts have the lowest urgency.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Classmate publicly says "Why are you shilling for Google? Other AI tools are better." 50+ can see it.</div>
+      <div class="a">✅ Best approach: "Yeah, I use multiple AI tools. I'm not saying Gemini is perfect — but it does some things differently. Happy to show you sometime."
+        <span class="why">Honest, non-defensive, doesn't embarrass them publicly, and opens a genuine conversation door.</span>
+      </div>
+    </div>
+
+    <div class="tip">💡 These questions look for initiative, practicality, and a people-first mindset — not textbook answers.</div>
+  </div>
+
+  <!-- SECTION 3: Gemini Knowledge -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">3</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">✨</div>
+      <div>
+        <h3>Section 3 — Gemini Product Knowledge <span class="pill">Max 20 pts</span></h3>
+        <div class="card-sub">Know your product — these have correct/incorrect answers</div>
+      </div>
+    </div>
+
+    <div class="ref-note">📌 Reference Only — Verify these features yourself on gemini.google.com</div>
+
+    <div class="qa">
+      <div class="q">Q: Which of these are REAL Google Gemini features? (Select ALL that apply)</div>
+      <div class="a">✅ Real features to look for: Gems, Canvas, Deep Research, NotebookLM integration, Gemini Live, Gemini Code Assist
+        <span class="why">Always verify on the official Gemini website before submitting — features update frequently. Avoid selecting anything that sounds made-up.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: "Why should I use Gemini for college work?" — which response is most accurate?</div>
+      <div class="a">✅ Focus on: Gemini's integration with Google Workspace (Docs, Sheets, Gmail, Drive) — if you already live in that ecosystem, it fits naturally into your workflow.
+        <span class="why">Choose the factually accurate option — avoid anything that makes exaggerated or false claims about Gemini's capabilities.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: Student needs to research for a 3,000-word essay on climate policy. Best Gemini feature?</div>
+      <div class="a">✅ Deep Research — it browses the web and compiles a comprehensive multi-source research report automatically.
+        <span class="why">Deep Research is specifically designed for exactly this use case. It's Gemini's most powerful research tool for long-form work.</span>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: How often do you currently use AI tools?</div>
+      <div class="a">✅ Answer honestly. If you genuinely use AI tools daily or regularly, say so — they want real users who can authentically represent the product.
+        <span class="why">Be truthful. The program values genuine daily users who can speak credibly about AI from experience.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Campus -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">4</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">🏫</div>
+      <div>
+        <h3>Section 4 — Your Campus, Your Turf <span class="pill orange">Max 25 pts</span></h3>
+        <div class="card-sub">⚠️ Be SPECIFIC. These have the highest weightage. Write about YOUR campus only.</div>
+      </div>
+    </div>
+
+    <div class="ref-note">📌 Reference Only — Fill based on YOUR actual campus. These are prompts to guide you.</div>
+
+    <div class="campus-field">
+      <div class="cf-label">Q1 – A spot where students wait 5+ minutes</div>
+      Describe a real spot where students queue — canteen line, ATM, hostel gate, registration counter. Include specific timing.
+    </div>
+    <div class="campus-field">
+      <div class="cf-label">Q2 – Informal event space for 30 people, no permission needed</div>
+      Name a real open area — hostel common room, garden behind labs, open corridor, basketball court. Explain why no booking is needed.
+    </div>
+    <div class="campus-field">
+      <div class="cf-label">Q3 – How to reach 500+ students in 24 hours</div>
+      Name the SPECIFIC channel — a class WhatsApp group with 800 members, the college notice board Instagram admin, or the class rep (CR) network.
+    </div>
+    <div class="campus-field">
+      <div class="cf-label">Q4 – Upcoming event where Gemini could have a presence</div>
+      Name an ACTUAL event — your tech fest, cultural fest, freshers' welcome, or hackathon. Give an approximate month and describe what Gemini's presence would look like.
+    </div>
+    <div class="campus-field">
+      <div class="cf-label">Q5 – Inside joke/slang/tradition unique to your campus</div>
+      Pick something real and local — a nickname for a spot, a tradition, or a professor's famous catchphrase. Explain it briefly.
+    </div>
+
+    <div class="tip">🎯 These 5 questions carry the most weight. Real, specific answers score significantly higher than generic ones. Spend extra time here.</div>
+  </div>
+
+  <!-- SECTION 5: Quickfire -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">5</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">⚡</div>
+      <div>
+        <h3>Section 5 — Quick-Fire <span class="pill">Max 5 pts</span></h3>
+        <div class="card-sub">Fast questions. Trust your instinct — don't overthink.</div>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: A brand asks you to promote their product. You've never used it. What do you do?</div>
+      <div class="a">✅ Try the product first. Only promote if you genuinely believe in it.</div>
+    </div>
+
+    <div class="qa">
+      <div class="q">Q: You're running behind on a deadline due tomorrow. What's your instinct?</div>
+      <div class="a">✅ Message the program manager today, explain the situation, and propose a 2-day extension with a clear plan.
+        <span class="why">Shows maturity and proactivity. They want communicators, not people who pull all-nighters and deliver poor work.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="step-card blue">
+    <div class="card-ghost-num">6</div>
+    <div class="card-header">
+      <div class="card-icon icon-blue">✅</div>
+      <div>
+        <h3>Section 6 — Final Details & Submit</h3>
+        <div class="card-sub">Almost done — fill state/city and confirm your commitment</div>
+      </div>
+    </div>
+    <p style="font-size:14px;">Fill your state and city (where your college is located). Check the confirmation box confirming you can commit <strong>5–8 hours/week for 12 months</strong> and will remain enrolled until March 2027. Then hit Submit.</p>
+    <div class="tip">⏱️ After submission, you typically hear back within <strong>1 week</strong> (max). <strong>Pro tip:</strong> Reply to your submission confirmation email saying "I have submitted my application" — this nudges the team and speeds up processing. Check your spam folder too.</div>
+    <div style="background:#e6f4ea;border-radius:8px;padding:12px 16px;font-size:13px;color:#1e8e3e;margin-top:10px;display:flex;gap:10px;align-items:flex-start;">
+      <span style="flex-shrink:0">✉️</span>
+      <div><strong>Action after submitting:</strong> Reply to the confirmation email you receive saying <em>"Hi, I have submitted my application form. Looking forward to hearing back!"</em> — this keeps you on their radar and helps the team move your file forward faster.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 2: VIDEO -->
+  <div class="section-eyebrow">Step 2 of 4</div>
+  <h2 class="section-title">Record Your Video Pitch 🎬</h2>
+
+  <div class="step-card red">
+    <div class="card-ghost-num">2</div>
+    <div class="card-header">
+      <div class="card-icon icon-red">📬</div>
+      <div>
+        <h3>Got the Shortlist Email?</h3>
+        <div class="card-sub">You have exactly 72 hours to submit your video</div>
+      </div>
+    </div>
+    <p style="font-size:14px;">If shortlisted, you'll receive an email from <code>info@geministudentambassador.com</code> asking you to record a video under <strong>3 minutes</strong> covering 5 prompts. Upload to Google Drive (set to "Anyone with the link can view") and paste the link in their form.</p>
+    <div class="warn">⚠️ The 72-hour deadline is real. Don't sleep on it — missed deadline = missed spot.</div>
+  </div>
+
+  <div class="step-card red">
+    <div class="card-ghost-num">2</div>
+    <div class="card-header">
+      <div class="card-icon icon-red">🎤</div>
+      <div>
+        <h3>The 5 Video Prompts — What to Think About</h3>
+        <div class="card-sub">Under 3 mins total. Be natural, not scripted. These are thinking guides — not a script.</div>
+      </div>
+    </div>
+
+    <div class="ref-note">📌 Reference Only — Record in your own words. Authenticity beats perfection.</div>
+
+    <div class="video-prompt">
+      <div class="vp-label">Prompt 1 – Intro (≈30 seconds)</div>
+      <div class="vp-prompt">"Introduce yourself as if speaking to 500 freshers at orientation."</div>
+      <div class="vp-tip">💡 High energy. Name, college, course, and 1–2 things that define you (a hackathon win, a community role, something you've built). End with something punchy and memorable.</div>
+    </div>
+
+    <div class="video-prompt">
+      <div class="vp-label">Prompt 2 – Impromptu Pitch</div>
+      <div class="vp-prompt">"Pick any object near you and pitch it as if it's a Google product."</div>
+      <div class="vp-tip">💡 Grab something fun — your water bottle, earphones, a book. Give it a fake Google product name. Sell it with features and a tagline. Be creative and confident — this tests your marketing instinct.</div>
+    </div>
+
+    <div class="video-prompt">
+      <div class="vp-label">Prompt 3 – Campus Insight</div>
+      <div class="vp-prompt">"What's one thing about your campus an outsider wouldn't get? How would you use that for this program?"</div>
+      <div class="vp-tip">💡 Use your Section 4 answers. Be specific — mention the actual spot, tradition, or quirk. Then connect it to how you'd create buzz around Gemini in that context.</div>
+    </div>
+
+    <div class="video-prompt">
+      <div class="vp-label">Prompt 4 – Failure</div>
+      <div class="vp-prompt">"Tell us about a time you failed publicly. What did you learn?"</div>
+      <div class="vp-tip">💡 Be real — a hackathon loss, a presentation that flopped, an event nobody showed up to. Show self-awareness. The lesson matters more than the failure itself.</div>
+    </div>
+
+    <div class="video-prompt">
+      <div class="vp-label">Prompt 5 – The 7-Day Challenge</div>
+      <div class="vp-prompt">"Make Gemini the most talked-about thing on your campus in 7 days, zero budget. What do you do?"</div>
+      <div class="vp-tip">💡 Give a concrete plan — specific days, specific actions, specific channels. Day-by-day breakdowns show genuine planning ability. Real execution strategy wins, not vague ideas.</div>
+    </div>
+
+    <div class="tip">📌 After uploading your video form, <strong>reply to the shortlisting email</strong> confirming your submission — it helps the team track you.</div>
+    <div style="background:#e6f4ea;border-radius:8px;padding:12px 16px;font-size:13px;color:#1e8e3e;margin-top:10px;display:flex;gap:10px;align-items:flex-start;">
+      <span style="flex-shrink:0">✉️</span>
+      <div><strong>Action after video submission:</strong> Reply to the shortlisting email saying <em>"Hi, I have submitted my video pitch via the form. Please find it here: [your Drive link]. Looking forward to the next steps!"</em> — this is crucial. Without this reply, your video can get missed. Expect to hear back within <strong>~1 week</strong>.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 3: CONTRACT -->
+  <div class="section-eyebrow">Step 3 of 4</div>
+  <h2 class="section-title">Sign the Contract 📄</h2>
+
+  <div class="step-card green">
+    <div class="card-ghost-num">3</div>
+    <div class="card-header">
+      <div class="card-icon icon-green">✍️</div>
+      <div>
+        <h3>Onboarding Email + Contract</h3>
+        <div class="card-sub">Arrives within 2–3 days of video submission</div>
+      </div>
+    </div>
+    <p style="font-size:14px;margin-bottom:14px;">You'll receive a contract from <strong>Communique Marketing Solutions Pvt Ltd</strong> (the agency running the program for Google). Read it fully — it covers your duties, IP, the no-stipend policy, and incentive structure. Key points: internship period is until September 2026, courts in Gurugram have jurisdiction, and all liabilities are limited to incentives paid.</p>
+    <ul class="checklist">
+      <li><strong>Step 1:</strong> Download the contract PDF</li>
+      <li><strong>Step 2:</strong> Sign digitally — use Adobe Acrobat, DocHub, Smallpdf, or DigiSigner. Or print → sign → scan.</li>
+      <li><strong>Step 3:</strong> Rename the file: <code>YourFullName_CollegeName</code></li>
+      <li><strong>Step 4:</strong> Fill the confirmation form they link in the email and upload your signed contract</li>
+      <li><strong>Step 5:</strong> Reply to the email confirming submission</li>
+    </ul>
+    <div class="warn">⚠️ You have <strong>72 hours</strong> to sign and submit. Missing this deadline = losing your spot. No exceptions.</div>
+    <div class="tip">ℹ️ No monthly stipend — but you earn cash vouchers + physical rewards (Varsity Jacket, Laptop Bag, Pixel Phone!) based on points.</div>
+    <div style="background:#e6f4ea;border-radius:8px;padding:12px 16px;font-size:13px;color:#1e8e3e;margin-top:10px;display:flex;gap:10px;align-items:flex-start;">
+      <span style="flex-shrink:0">✉️</span>
+      <div><strong>Action after signing:</strong> Reply to the onboarding email saying <em>"Hi, I have signed and submitted the contract via the form. Excited to get started!"</em> — replying keeps you moving through the pipeline. You'll receive your GID and portal access within <strong>~1 week</strong> after this.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 4: GID -->
+  <div class="section-eyebrow">Step 4 of 4</div>
+  <h2 class="section-title">Get Your GID & Access the Portal 🚀</h2>
+
+  <div class="step-card" style="border-top:3px solid var(--g-yellow)">
+    <div class="card-ghost-num">4</div>
+    <div class="card-header">
+      <div class="card-icon icon-yellow">🎉</div>
+      <div>
+        <h3>You're Officially In!</h3>
+        <div class="card-sub">~2–3 days after contract submission</div>
+      </div>
+    </div>
+    <p style="font-size:14px;margin-bottom:12px;">You'll receive your final onboarding email with your unique <strong>GID (Google ID Number)</strong>. This is your permanent identity in the program for tasks, rewards, and referrals.</p>
+    <ul class="checklist">
+      <li>Log into the GSA Student Portal with your registered email</li>
+      <li>Complete your profile + post your Welcome Kit unboxing photo</li>
+      <li>Join the #TeamGemini community channel</li>
+      <li>Read the program guide deck end-to-end</li>
+      <li>Check your first set of tasks — start immediately for maximum momentum</li>
+    </ul>
+    <div class="tip">🏆 Note your GID carefully. It appears in every post caption, every form submission, every task. It's how you get credited for everything you do.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- MONTHLY TASKS -->
+  <div class="section-eyebrow">After Onboarding</div>
+  <h2 class="section-title">What You Do Every Month 📅</h2>
+
+  <p style="font-size:14px;margin-bottom:16px;color:var(--g-muted)">Three tasks are <strong>mandatory</strong> every month (miss them = lose points). Three are <strong>booster</strong> tasks for extra rewards. Submit all deliverables by the <strong>25th of every month</strong>.</p>
+
+  <div class="tasks-grid">
+    <div class="task-card">
+      <div class="tc-tag must">Must Do</div>
+      <div class="tc-name">🎮 Product Trials (Fun Nights)</div>
+      Monthly themed Google Meet event using Gemini with 10–30 students. Cameras must be ON, session recorded. Submit recording + participant links. 10 pts/participant.
+    </div>
+    <div class="task-card">
+      <div class="tc-tag must">Must Do</div>
+      <div class="tc-name">📸 Content Creation (Reel)</div>
+      Instagram Reel + mandatory LinkedIn cross-post every month. Use the monthly theme. Include your GID in caption. Tag @GoogleIndia, @GoogleGemini + use all mandatory hashtags.
+    </div>
+    <div class="task-card">
+      <div class="tc-tag must">Must Do</div>
+      <div class="tc-name">📝 Monthly Highlights</div>
+      One post on LinkedIn about your ambassador journey — wins, events, growth, learnings. Any format: reel, static, or carousel. 100 pts fixed upon authentication.
+    </div>
+    <div class="task-card">
+      <div class="tc-tag boost">Booster</div>
+      <div class="tc-name">🎙️ Campus Interviews</div>
+      Record 2–4 min on-camera video interviews with students using the monthly persona + approved script. Submit via portal. 10 pts/interview (min 5, max 10).
+    </div>
+    <div class="task-card">
+      <div class="tc-tag boost">Booster</div>
+      <div class="tc-name">💡 Product Understanding</div>
+      Share the official form link with campus. Students register using your GID and attend the live expert session. 2 pts/verified attendee (min 10, max 25).
+    </div>
+    <div class="task-card">
+      <div class="tc-tag boost">Booster</div>
+      <div class="tc-name">📣 Boost Gemini Campaigns</div>
+      When Google drops a campaign (House of Gemini, Fund My Crazy, YouTube Fan Fest) — promote it, drive sign-ups, and be the campus face for it.
+    </div>
+  </div>
+
+  <div class="tip" style="margin-top:20px;">📆 Submit all deliverables by the <strong>25th of every month</strong>. Missing mandatory tasks for <strong>60+ consecutive days = disqualification</strong>. No exceptions.</div>
+
+  <hr class="divider">
+
+  <!-- SCORING TABLE -->
+  <div class="section-eyebrow">Scoring Matrix</div>
+  <h2 class="section-title">How Points Work 📊</h2>
+
+  <div style="overflow-x:auto">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Task Type</th>
+          <th>Activity</th>
+          <th>Key Parameter</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3"><span class="task-type-must">Must Do</span></td>
+          <td><strong>Product Trials</strong></td>
+          <td>Min 10 / Max 30 participants</td>
+          <td><strong>10 per participant</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Content Creation</strong></td>
+          <td>1 Authenticated Reel + 1 LinkedIn Post</td>
+          <td><strong>100 Fixed + up to 100 Bonus</strong><br>
+            <small style="color:var(--g-muted)">1K views +25 · 4K views +50 · 7K views +75 · 10K views +100</small>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Monthly Highlight</strong></td>
+          <td>1 Post + 1 LinkedIn Cross-post</td>
+          <td><strong>100 Fixed</strong></td>
+        </tr>
+        <tr>
+          <td rowspan="2"><span class="task-type-boost">Booster</span></td>
+          <td><strong>Campus Interviews</strong></td>
+          <td>Min 5 / Max 10 genuine interviews</td>
+          <td><strong>10 per interview</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Product Understanding</strong></td>
+          <td>Min 10 / Max 25 participants</td>
+          <td><strong>2 per participant</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- REWARDS -->
+  <div id="rewards"></div>
+  <div class="section-eyebrow">Rewards & Perks</div>
+  <h2 class="section-title">What You Can Win 🎁</h2>
+
+  <div style="overflow-x:auto;margin-bottom:24px;">
+    <table class="reward-table">
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Points</th>
+          <th>E-Voucher & Physical Reward</th>
+          <th>Digital Reward</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tier-badge"><span class="tier-icon">🥉</span> The Explorer (Bronze)</span></td>
+          <td><strong>600</strong></td>
+          <td>₹500 e-voucher + Premium Diary</td>
+          <td>Bronze Badge + Certificate</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge"><span class="tier-icon">🥈</span> The Navigator (Silver)</span></td>
+          <td><strong>1,200</strong></td>
+          <td>₹500 e-voucher + Sling Bag</td>
+          <td>Silver Badge + Community Shoutout</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge"><span class="tier-icon">🥇</span> The Architect (Gold)</span></td>
+          <td><strong>1,800</strong></td>
+          <td>₹1,000 e-voucher + Matt Black Bottle</td>
+          <td>Gold Badge</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge"><span class="tier-icon">💎</span> The Visionary (Sapphire)</span></td>
+          <td><strong>2,400</strong></td>
+          <td>₹1,000 e-voucher + Varsity Jacket</td>
+          <td>Sapphire Badge</td>
+        </tr>
+        <tr>
+          <td><span class="tier-badge"><span class="tier-icon">🏆</span> The Titan (Platinum)</span></td>
+          <td><strong>3,000</strong></td>
+          <td>₹1,000 e-voucher + Laptop Bag</td>
+          <td>Platinum Badge</td>
+        </tr>
+        <tr style="background:#fff3e0">
+          <td><span class="tier-badge"><span class="tier-icon">💠</span> The Oracle (Diamond)</span></td>
+          <td><strong>3,600</strong><br><small style="color:var(--g-muted)">Top 50 → Pixel Buds 2a</small></td>
+          <td>₹5,000 e-voucher</td>
+          <td>Diamond Badge + Ambassador Spotlight</td>
+        </tr>
+        <tr style="background:#e6f4ea">
+          <td><span class="tier-badge"><span class="tier-icon">🌟</span> The Catalyst (Celestial)</span></td>
+          <td><strong>4,200</strong><br><small style="color:var(--g-muted)">Top 10 → Pixel Phone 10a 📱</small></td>
+          <td>₹5,000 e-voucher</td>
+          <td>Celestial Badge + Certificate of Recognition</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:var(--g-muted);margin-bottom:24px;">*Certificates will only be sent after completion of the program.</p>
+
+  <!-- HIGH PERFORMANCE REWARDS -->
+  <div class="hp-grid">
+    <div class="hp-card">
+      <div class="hp-icon">📱</div>
+      <h4>Catalyst Reward (Top 10)</h4>
+      <p>First 10 ambassadors to hit 4,200 points win a <strong>Google Pixel Phone 10a</strong>.</p>
+    </div>
+    <div class="hp-card">
+      <div class="hp-icon">🎧</div>
+      <h4>Oracle Reward (Top 50)</h4>
+      <p>First 50 ambassadors to hit 3,600 points win <strong>Google Pixel Buds 2a</strong>.</p>
+    </div>
+    <div class="hp-card">
+      <div class="hp-icon">🔥</div>
+      <h4>Content Creation Spotlight</h4>
+      <p>Reels crossing <strong>1M+ views</strong> earn a chance to be featured on the official Google India page.</p>
+    </div>
+    <div class="hp-card">
+      <div class="hp-icon">⭐</div>
+      <h4>Monthly Highlights Recognition</h4>
+      <p>Ambassadors with Top Stories each month may be featured on <strong>official Google social channels</strong>.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- FAQs -->
+  <div id="faq"></div>
+  <div class="section-eyebrow">FAQ</div>
+  <h2 class="section-title">Frequently Asked Questions 🤔</h2>
+
+  <div id="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is my role as an Ambassador?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Complete monthly tasks (product trials, content creation, monthly highlights), promote Gemini usage, and engage students on your campus. You're Google's voice on your campus.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How many tasks are mandatory?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">3 tasks are mandatory every month (Product Trials, Content Creation, Monthly Highlights). The remaining 2 (Campus Interviews, Product Understanding) are booster tasks for extra points.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        When are tasks assigned and where do I submit?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Tasks are released every month on your GSA portal. All briefs, updates, and submissions are through the portal only. Submit all deliverables by the 25th of every month.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the minimum requirement for Fun Night events?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Minimum 10 verified participants, maximum 30. Cameras must be ON throughout the Google Meet session, and the session must be recorded. Participant list is cross-verified with the recording.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is LinkedIn posting compulsory?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Yes — LinkedIn cross-posting is mandatory for both Content Creation (Reel) and Monthly Highlights tasks, regardless of who created the original content.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        When will I receive points and rewards?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">After your submission is verified at the end of each monthly cycle. Entries are evaluated within 7 days and rewards dispatched within approximately 15 days. Delivery partners reach out over SMS to coordinate.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What happens if I miss mandatory tasks for 60 consecutive days?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">You will be disqualified from the program. No exceptions. Missing one month's tasks affects your points and program standing significantly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I collaborate with other ambassadors on tasks?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Yes, but you must submit your own individual work. For Content Creation, another campus creator can make the Reel but your GID must be in the caption and you must cross-post on your own LinkedIn.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Are reused or previously posted submissions allowed?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">No — only original, fresh, and verified work is accepted. All Gemini links are scanned; duplicate, fake, or recycled links result in the entire group's entries being rejected.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Who do I contact for support?
+        <span class="faq-chevron">▼</span>
+      </div>
+      <div class="faq-a">Use the official #TeamGemini WhatsApp community, your GSA portal support, or email the program team. You can also reach out to your referring ambassadors — Ayush (GID: 436) or Tushar (GID: 1723) — who can help guide you.</div>
+    </div>
+  </div>
+
+  <!-- COMMUNITY BAND -->
+  <div class="community-band">
+    <h3>Join the #TeamGemini Community 🚀</h3>
+    <p>Connect with your fellow ambassadors, get updates, and get support from Ayush & Tushar who are guiding you through this process.</p>
+    <div class="community-links">
+      <a class="comm-btn whatsapp" href="https://chat.whatsapp.com/FYUglyVIyD5I71uIWSMtY3" target="_blank">
+        💬 Join WhatsApp Community
+      </a>
+      <a class="comm-btn form" href="https://recruitment.geministudentambassador.com/" target="_blank">
+        📝 Apply Now (Use GID 436 or 1723)
+      </a>
+    </div>
+    <div style="margin-top:20px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;position:relative;">
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 20px;text-align:center;">
+        <div style="color:rgba(255,255,255,0.5);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Ayush Sharma</div>
+        <div style="color:#fff;font-weight:700;font-size:20px;color:#4285F4">GID: 436</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 20px;text-align:center;">
+        <div style="color:rgba(255,255,255,0.5);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Tushar Goswami</div>
+        <div style="color:#fff;font-weight:700;font-size:20px;color:#34A853">GID: 1723</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">
+    <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 8.627 8.627 14 2 14C8.627 14 14 19.373 14 26C14 19.373 19.373 14 26 14C19.373 14 14 8.627 14 2Z" fill="url(#fg)"/>
+      <defs>
+        <linearGradient id="fg" x1="2" y1="2" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4285F4"/><stop offset="0.33" stop-color="#FBBC05"/>
+          <stop offset="0.66" stop-color="#EA4335"/><stop offset="1" stop-color="#34A853"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    #TeamGemini India 2026 · Referral Guide
+  </div>
+  <p>Made with 💙 by Ayush Sharma (GID: 436) & Tushar Goswami (GID: 1723) &nbsp;·&nbsp; Confidential — for referral support only</p>
+  <p style="margin-top:6px;font-size:11px;">⚠️ All application answers shown are for reference & understanding only. Do not copy-paste. Write your own original responses.</p>
+  <div class="footer-dots">
+    <div class="footer-dot" style="background:#4285F4"></div>
+    <div class="footer-dot" style="background:#EA4335"></div>
+    <div class="footer-dot" style="background:#FBBC05"></div>
+    <div class="footer-dot" style="background:#34A853"></div>
+  </div>
+</div>
+
+<script>
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const chevron = el.querySelector('.faq-chevron');
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    chevron.classList.add('open');
+  }
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
 </html>
